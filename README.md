@@ -112,3 +112,4 @@ Please feel free to open an issue or contact personally via email, using
 vad221@gmail.com  
 vadim.sushko@bosch.com  
 
+# one-shot-synthesis
