@@ -1,0 +1,5 @@
+python train.py --exp_name pinus_01 --dataset_name pinus_50m --num_epochs 100 --max_size 330 --use_kornia_augm --prob_augm 0.7
+
+python test.py --exp_name pinus_01 --which_epoch 150000 
+
+python evaluate.py --exp_name pinus_01 --epoch 150000

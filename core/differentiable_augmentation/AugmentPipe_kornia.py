@@ -49,7 +49,7 @@ class AugmentPipe_kornia(torch.nn.Module):
                 tr = kornia.augmentation.RandomRotation(degrees=8, same_on_batch=True)
                 for i in range(sh[0]):
                     x[i] = tr(x[i])
-                tr = kornia.augmentation.CenterCrop(size=(sh[2]*0.80, sh[3]*0.80))
+                tr = kornia.augmentation.CenterCrop(size=(int(sh[2]*0.80), int(sh[3]*0.80)))
                 for i in range(sh[0]):
                     x[i] = tr(x[i])
                     x[i] = torch.nn.functional.interpolate(x[i], size=(sh[2], sh[3]), mode="bilinear")

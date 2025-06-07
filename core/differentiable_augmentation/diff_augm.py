@@ -29,14 +29,7 @@ class augment_pipe():
             # --- Tentativa 2 (Mais provável para saída de GANs): Pegar o último tensor da lista (maior resolução) ---
             main_images_tensor = original_images_list[-1]
 
-            # --- LINHAS DE DEPURACÃO ADICIONADAS NOVAMENTE PARA ESTA ETAPA ---
-            print(f"DEBUG (após extração): Tipo de 'main_images_tensor': {type(main_images_tensor)}")
-            if isinstance(main_images_tensor, torch.Tensor):
-                print(f"DEBUG (após extração): Dimensões de 'main_images_tensor': {main_images_tensor.ndim}")
-                print(f"DEBUG (após extração): Shape de 'main_images_tensor': {main_images_tensor.shape}")
-            else:
-                print("DEBUG (após extração): 'main_images_tensor' AINDA NÃO É UM TENSOR!")
-            # --- FIM DAS LINHAS DE DEPURACÃO ---
+
 
 
             augmented_main_images = self.augment_func(main_images_tensor)
